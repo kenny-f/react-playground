@@ -4,6 +4,7 @@
   "description": "just a playground for learning react",
   "main": "index.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/kenny-f/react-playground/issues"
   },
-  "homepage": "https://github.com/kenny-f/react-playground#readme"
+  "homepage": "https://github.com/kenny-f/react-playground#readme",
+  "devDependencies": {
+    "html-webpack-plugin": "^1.7.0",
+    "webpack": "^1.12.9"
+  }
 }
