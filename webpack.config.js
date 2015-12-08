@@ -10,16 +10,23 @@ const PATHS = {
 };
 
 module.exports = {
-  entry: path.resolve(__dirname, 'app/main.js'),
+  devTool: 'eval',
+  entry: [
+    'webpack/hot/dev-server',
+    'webpack-dev-server/client?http://localhost:8080',
+    path.resolve(__dirname, 'app/index.jsx')
+  ],
   output: {
     path: PATHS.build,
     filename: 'bundle.js'
   },
+  resolve: {
+    extensions: ['', '.js', '.jsx', '.json'], // enable reference to JSX files without an extension
+  },
   devServer: {
-    devTool: 'eval',
     contentBase: 'build',
     historyApiFallback: true,
-    hot: true,
+    // hot: true,
     inline: true,
     progress: true,
     stats: {
@@ -29,8 +36,15 @@ module.exports = {
     host: config.host,
     port: config.port,
   },
+  module: {
+    loaders: [{
+      test: /\.jsx?$/,
+      exclude: /node_modules/,
+      loaders: ['react-hot', 'babel'],
+    }]
+  },
   plugins: [
     new HtmlWebpackPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
+    //new webpack.HotModuleReplacementPlugin(),
   ]
 };
