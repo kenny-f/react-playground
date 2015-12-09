@@ -26,37 +26,30 @@ module.exports = {
   devServer: {
     contentBase: 'build',
     historyApiFallback: true,
-    // hot: true,
+    hot: true,
     inline: true,
     progress: true,
     stats: {
-      colors: true
-      //'errors-only'
+      colors: true,
+      errorsOnly: true,
     },
     host: config.host,
     port: config.port,
   },
   module: {
     loaders: [
-      //react hot loader
-      {
-        test: /\.jsx?$/,
-        exclude: /node_modules/,
-        loader: 'react-hot',
-      },
       //babel loader
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        query: {
-          presets: ['es2015', 'react']
-        }
+        loader: 'babel',
       },
     ]
   },
   plugins: [
-    new HtmlWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: 'React Playground'
+    }),
     new webpack.HotModuleReplacementPlugin(),
   ]
 };
