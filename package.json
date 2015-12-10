@@ -8,7 +8,8 @@
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "dev": "webpack-dev-server",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --compilers js:babel-core/register --require ./test/test-helper.js 'test/**/.@(js|jsx)'",
+    "test:watch": "npm test -- --watch",
     "start": "babel-node server"
   },
   "repository": {
@@ -30,10 +31,14 @@
     "babel-preset-react": "^6.3.13",
     "babel-preset-stage-0": "^6.3.13",
     "babel-preset-stage-1": "^6.3.13",
+    "chai": "^3.4.1",
+    "chai-immutable": "^1.5.3",
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^2.0.0",
     "eslint-plugin-react": "^3.11.3",
     "html-webpack-plugin": "^1.7.0",
+    "jsdom": "^7.2.0",
+    "mocha": "^2.3.4",
     "react-transform-catch-errors": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
@@ -43,7 +48,10 @@
   },
   "dependencies": {
     "dotenv": "^1.2.0",
+    "immutable": "^3.7.5",
     "react": "^0.14.3",
+    "react-bootstrap": "^0.28.1",
+    "react-bootstrap-grid": "^1.0.0",
     "react-dom": "^0.14.3"
   }
 }

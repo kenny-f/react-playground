@@ -2,5 +2,6 @@ import React from 'react';
 import { render } from 'react-dom';
 
 import Component from './Component.jsx';
+import Navigation from './Navigation';
 
-render(<Component />, document.getElementById('root'));
+render(<Navigation />, document.getElementById('root'));
