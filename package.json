@@ -8,7 +8,8 @@
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "dev": "webpack-dev-server",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node server"
   },
   "repository": {
     "type": "git",
@@ -37,7 +38,8 @@
     "react-transform-hmr": "^1.0.1",
     "redbox-react": "^1.2.0",
     "webpack": "^1.12.9",
-    "webpack-dev-server": "^1.14.0"
+    "webpack-dev-server": "^1.14.0",
+    "webpack-hot-middleware": "^2.6.0"
   },
   "dependencies": {
     "dotenv": "^1.2.0",

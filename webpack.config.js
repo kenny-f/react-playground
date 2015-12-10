@@ -6,35 +6,25 @@ var config = require('./config');
 
 const PATHS = {
   app: path.join(__dirname, 'app'),
-  build: path.join(__dirname, 'build')
+  dist: path.join(__dirname, 'dist'),
+  nodeModules: path.resolve(__dirname, 'node_modules')
 };
 
 module.exports = {
   devTool: 'eval',
   entry: [
-    'webpack/hot/dev-server',
-    'webpack-dev-server/client?http://localhost:8080',
+    //'webpack/hot/dev-server',
+    //'webpack-dev-server/client?http://localhost:8080',
+    'webpack-hot-middleware/client?reload=true',
     path.resolve(__dirname, 'app/index.jsx')
   ],
   output: {
-    path: PATHS.build,
-    filename: 'bundle.js'
+    path: PATHS.dist,
+    filename: 'bundle.js',
+    publicPath: '/',
   },
   resolve: {
     extensions: ['', '.js', '.jsx', '.json'], // enable reference to JSX files without an extension
-  },
-  devServer: {
-    contentBase: 'build',
-    historyApiFallback: true,
-    hot: true,
-    inline: true,
-    progress: true,
-    stats: {
-      colors: true,
-      errorsOnly: true,
-    },
-    host: config.host,
-    port: config.port,
   },
   module: {
     loaders: [
@@ -48,8 +38,13 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'React Playground'
+      title: 'React Playground',
+      template: 'app/index.tpl.html',
+      inject: 'body',
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify('development')
+    }),
   ]
 };

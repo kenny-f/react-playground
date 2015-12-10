@@ -3,11 +3,4 @@ import { render } from 'react-dom';
 
 import Component from './component.jsx';
 
-main();
-
-function main() {
-  const app = document.createElement('div');
-  document.body.appendChild(app);
-
-  render(<Component />, app);
-}
+render(<Component />, document.getElementById('root'));
