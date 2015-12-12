@@ -1,19 +1,7 @@
 import React from 'react';
-import ReactCSS from 'reactcss';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
-class Navigation extends ReactCSS.Component {
-  classes() {
-		return {
-			'default': {
-				'navbar': {
-					borderColor: 'rgba(34,34,34,.05)',
-					backgroundColor: 'black'
-				}
-			}
-		}
-	}
-
+class Navigation extends React.Component {
   render() {
     return (
       <Navbar>
