@@ -1,13 +1,25 @@
 import React from 'react';
+import ReactCSS from 'reactcss';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
 
-class Navigation extends React.Component {
+class Navigation extends ReactCSS.Component {
+  classes() {
+		return {
+			'default': {
+				'navbar': {
+					borderColor: 'rgba(34,34,34,.05)',
+					backgroundColor: 'black'
+				}
+			}
+		}
+	}
+
   render() {
     return (
-      <Navbar inverse>
+      <Navbar>
         <Navbar.Header>
           <Navbar.Brand>
-            Playground
+            Stay on Budget
           </Navbar.Brand>
           <Navbar.Toggle/>
         </Navbar.Header>
@@ -24,8 +36,9 @@ class Navigation extends React.Component {
             </NavDropdown>
           </Nav>
           <Nav pullRight>
-            <NavItem eventKey={1} href="#">Link Right</NavItem>
-            <NavItem eventKey={2} href="#">Link Right</NavItem>
+            <NavItem eventKey={1} href="#">About</NavItem>
+            <NavItem eventKey={2} href="#">Contact</NavItem>
+            <NavItem eventKey={3} href="#">Login</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
