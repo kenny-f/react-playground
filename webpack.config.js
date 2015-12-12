@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var config = require('./config');
 
@@ -34,6 +35,11 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel',
       },
+      //css loader
+      {
+        test: /\.css$/,
+        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
+      },
     ]
   },
   plugins: [
@@ -46,5 +52,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
+    new ExtractTextPlugin('app.css', { allChunks: true})
   ]
 };
