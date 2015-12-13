@@ -7,7 +7,6 @@ import styles from './header.css';
 class Header extends React.Component {
 	render() {
 		return (
-			<div>
 				<header styleName="header">
 					<div styleName="header-content">
 						<div styleName="header-content-inner">
@@ -18,7 +17,6 @@ class Header extends React.Component {
 						</div>
 					</div>
 				</header>
-			</div>
 		);
 	}
 }

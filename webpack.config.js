@@ -17,7 +17,7 @@ module.exports = {
     //'webpack/hot/dev-server',
     //'webpack-dev-server/client?http://localhost:8080',
     'webpack-hot-middleware/client?reload=true',
-    path.resolve(__dirname, 'app/index.jsx')
+    path.resolve(__dirname, 'src/app.js')
   ],
   output: {
     path: PATHS.dist,
@@ -50,7 +50,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: 'React Playground',
-      template: 'app/index.tpl.html',
+      template: 'src/index.tpl.html',
       inject: 'body',
     }),
     new webpack.HotModuleReplacementPlugin(),
