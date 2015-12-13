@@ -6,6 +6,7 @@ import Component from './Component.jsx';
 import Navigation from './Navigation';
 import Home from './Home';
 import Dashboard from './Dashboard';
+import styles from './app.css';
 
 // render(<Navigation />, document.getElementById('root'));
 

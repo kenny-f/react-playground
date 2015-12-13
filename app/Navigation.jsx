@@ -1,10 +1,13 @@
 import React from 'react';
+import CSSModules from 'react-css-modules';
 import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap';
+
+import styles from './navigation.css';
 
 class Navigation extends React.Component {
   render() {
     return (
-      <Navbar>
+      <Navbar styleName="navbar">
         <Navbar.Header>
           <Navbar.Brand>
             Stay on Budget
@@ -34,4 +37,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Navigation;
+export default CSSModules(Navigation, styles);

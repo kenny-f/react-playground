@@ -40,6 +40,11 @@ module.exports = {
         test: /\.css$/,
         loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
       },
+      //inline images
+      {
+        test: /\.(png|jpg)$/,
+        loader: 'url?limit=25000'
+      },
     ]
   },
   plugins: [
@@ -52,6 +57,6 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
-    new ExtractTextPlugin('app.css', { allChunks: true})
+    new ExtractTextPlugin('styles.css', { allChunks: true})
   ]
 };
