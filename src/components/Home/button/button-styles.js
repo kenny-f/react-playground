@@ -1,3 +1,5 @@
+import settings from '../../../views/home-settings';
+
 const styles = {
   base: {
     border: 0,
@@ -7,17 +9,17 @@ const styles = {
     fontWeight: 700,
   },
 	default: {
-		borderColor: '#fff',
-		color: '#222',
-		backgroundColor: '#fff',
+		borderColor: settings.colors.white,
+		color: settings.colors.black,
+		backgroundColor: settings.colors.white,
 		WebkitTransition: 'all .35s',
 		MozTransition: 'all .35s',
 		transition: 'all .35s',
 	},
   primary: {
-    borderColor: '#f05f40',
-    color: '#fff',
-    backgroundColor: '#f05f40',
+    borderColor: settings.colors.orange,
+    color: settings.colors.white,
+    backgroundColor: settings.colors.orange,
     WebkitTransition: 'all .35s',
     MozTransition: 'all .35s',
     transition: 'all .35s',
