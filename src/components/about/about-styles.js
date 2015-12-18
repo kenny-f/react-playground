@@ -1,5 +1,8 @@
 const styles = {
-  orange: {
+  section: {
+		padding: '100px 0',
+	},
+	orange: {
     backgroundColor: '#f05f40',
   },
   sectionHeading: {

@@ -2,6 +2,7 @@ import React from 'react';
 import Radium from 'radium';
 
 import Button from '../Home/button/Button';
+import Line from '../Home/line/Line';
 import styles from './header-styles';
 
 class Header extends React.Component {
@@ -11,11 +12,11 @@ class Header extends React.Component {
         <div style={styles.headerContent}>
           <div style={styles.headerContentInner}>
             <h1 style={styles.headerTitle}>Your Favorite Source of Free Bootstrap Themes</h1>
-            <hr style={styles.headerSeparator}/>
+            <Line/>
             <p style={styles.headerParagraph}>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just
               download your template and start going, no strings attached!</p>
             {/* <a href="#about" className="page-scroll" styleName="btn">Find Out More</a> */}
-            <Button>Find Out More</Button>
+            <Button kind="primary">Find Out More</Button>
           </div>
         </div>
       </header>
