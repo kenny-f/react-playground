@@ -2,7 +2,8 @@ import React from 'react';
 import CSSModules from 'react-css-modules';
 
 import Navigation from './../components/Navigation';
-import Header from './../components/Header';
+import Header from './../components/header/Header';
+import About from './../components/about/About';
 
 import styles from './Home.css';
 
@@ -12,6 +13,7 @@ class Home extends React.Component {
 			<div styleName="main">
 				<Navigation />
 				<Header />
+				<About />
 			</div>
     );
   }

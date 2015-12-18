@@ -6,7 +6,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var config = require('./config');
 
 const PATHS = {
-  app: path.join(__dirname, 'app'),
+  app: path.join(__dirname, 'src'),
   dist: path.join(__dirname, 'dist'),
   nodeModules: path.resolve(__dirname, 'node_modules')
 };
@@ -38,12 +38,17 @@ module.exports = {
       //css loader
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]')
+        loader: ExtractTextPlugin.extract('style', 'css?modules&importLoaders=1&localIdentName=[name]__[local]___[hash:base64:5]'),
       },
       //inline images
+      //{
+      //  test: /\.(png|jpg)$/,
+      //  loader: 'url?limit=25000',
+      //},
+      //file loader for images
       {
         test: /\.(png|jpg)$/,
-        loader: 'url?limit=25000'
+        loader: 'file?name=img/[name].[ext]',
       },
     ]
   },
@@ -58,5 +63,8 @@ module.exports = {
       'process.env.NODE_ENV': JSON.stringify('development')
     }),
     new ExtractTextPlugin('styles.css', { allChunks: true})
-  ]
+  ],
+  externals: {
+    'jquery': 'jQuery'
+  }
 };

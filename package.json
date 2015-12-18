@@ -4,7 +4,8 @@
   "description": "just a playground for learning react",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && webpack",
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "dev": "webpack-dev-server",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
@@ -59,6 +60,8 @@
     "dotenv": "^1.2.0",
     "history": "^1.16.0",
     "immutable": "^3.7.5",
+    "jquery": "^2.1.4",
+    "radium": "^0.15.3",
     "react": "^0.14.3",
     "react-bootstrap": "^0.28.1",
     "react-bootstrap-grid": "^1.0.0",
