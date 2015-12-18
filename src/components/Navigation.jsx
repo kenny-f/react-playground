@@ -2,7 +2,6 @@ import React from 'react';
 import Radium from 'radium';
 import { Link } from 'react-router';
 
-// import styles from './navigation.css';
 
 class Navigation extends React.Component {
   render() {

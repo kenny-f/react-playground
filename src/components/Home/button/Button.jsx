@@ -8,7 +8,7 @@ import styles from './button-styles';
 class Button extends React.Component {
   render() {
     return (
-      <a style={styles.base}>
+      <a className="btn btn-primary btn-xl page-scroll" style={styles.base}>
         {this.props.children}
       </a>
     );
