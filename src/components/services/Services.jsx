@@ -1,16 +1,19 @@
 import React from 'react';
 import Radium from 'radium';
+import Line from '../Home/line/Line';
+import settings from '../../views/home-settings';
+
 //import styles from './line-styles';
 
 class Services extends React.Component {
 	render() {
 		return (
-			<section id="services">
+			<section style={settings.section} id="services">
 				<div className="container">
 					<div className="row">
 						<div className="col-lg-12 text-center">
-							<h2 className="section-heading">At Your Service</h2>
-							<hr className="primary" />
+							<h2 style={[settings.sectionHeading]}>At Your Service</h2>
+							<Line color="orange"/>
 						</div>
 					</div>
 				</div>
