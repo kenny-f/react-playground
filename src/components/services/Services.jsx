@@ -1,5 +1,5 @@
 import React from 'react';
-import Radium from 'radium';
+import radium from 'radium';
 import Line from '../Home/line/Line';
 import settings from '../../views/home-settings';
 
@@ -52,4 +52,4 @@ class Services extends React.Component {
   }
 }
 
-export default Radium(Services);
+export default radium(Services);

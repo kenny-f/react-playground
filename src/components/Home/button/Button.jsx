@@ -1,5 +1,5 @@
 import React from 'react';
-import Radium from 'radium';
+import radium from 'radium';
 import styles from './button-styles';
 
 class Button extends React.Component {
@@ -17,4 +17,4 @@ Button.propTypes = {
   kind: React.PropTypes.oneOf(['default', 'primary']).isRequired,
 };
 
-export default Radium(Button);
+export default radium(Button);

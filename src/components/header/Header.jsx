@@ -1,5 +1,5 @@
 import React from 'react';
-import Radium from 'radium';
+import radium from 'radium';
 
 import Button from '../Home/button/Button';
 import Line from '../Home/line/Line';
@@ -24,4 +24,4 @@ class Header extends React.Component {
   }
 }
 
-export default Radium(Header);
+export default radium(Header);

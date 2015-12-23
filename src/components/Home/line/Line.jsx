@@ -1,5 +1,5 @@
 import React from 'react';
-import Radium from 'radium';
+import radium from 'radium';
 import styles from './line-styles';
 
 class Line extends React.Component {
@@ -14,4 +14,4 @@ Line.propTypes = {
   color: React.PropTypes.string,
 };
 
-export default Radium(Line);
+export default radium(Line);

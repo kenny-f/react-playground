@@ -4,7 +4,6 @@ const styles = {
   header: {
     position: 'relative',
     width: '100%',
-    //height: '100vh',
     textAlign: 'center',
     color: '#fff',
     backgroundImage: 'url("img/header.jpg")',

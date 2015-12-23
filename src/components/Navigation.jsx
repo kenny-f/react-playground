@@ -1,5 +1,5 @@
 import React from 'react';
-import Radium from 'radium';
+import radium from 'radium';
 
 class Navigation extends React.Component {
   render() {
@@ -116,4 +116,4 @@ class Navigation extends React.Component {
   }
 }
 
-export default Radium(Navigation);
+export default radium(Navigation);
