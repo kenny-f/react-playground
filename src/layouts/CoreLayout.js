@@ -1,22 +1,21 @@
-import React from 'react'
-//import 'styles/core.scss'
+import React from 'react';
 
 class CoreLayout extends React.Component {
-	//const propTypes = {
+	// const propTypes = {
   //  children: React.PropTypes.element
-  //};
+  // };
 
-  render () {
+  render() {
     return (
-      //<div className='page-container'>
+      // <div className='page-container'>
       //  <div className='view-container'>
       //    {this.props.children}
       //  </div>
-      //</div>
+      // </div>
 			<div>
 				{this.props.children}
 			</div>
-    )
+    );
   }
 }
 

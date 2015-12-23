@@ -8,14 +8,14 @@ const styles = {
     fontFamily: "'Open Sans','Helvetica Neue',Arial,sans-serif",
     fontWeight: 700,
   },
-	default: {
-		borderColor: settings.colors.white,
-		color: settings.colors.black,
-		backgroundColor: settings.colors.white,
-		WebkitTransition: 'all .35s',
-		MozTransition: 'all .35s',
-		transition: 'all .35s',
-	},
+  default: {
+    borderColor: settings.colors.white,
+    color: settings.colors.black,
+    backgroundColor: settings.colors.white,
+    WebkitTransition: 'all .35s',
+    MozTransition: 'all .35s',
+    transition: 'all .35s',
+  },
   primary: {
     borderColor: settings.colors.orange,
     color: settings.colors.white,
@@ -24,9 +24,9 @@ const styles = {
     MozTransition: 'all .35s',
     transition: 'all .35s',
   },
-	xl: {
-		padding: '15px 30px',
-	},
+  xl: {
+    padding: '15px 30px',
+  },
 };
 
 export default styles;
