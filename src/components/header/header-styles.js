@@ -1,5 +1,4 @@
-// noinspection Eslint
-import headerBackground from './header.jpg';
+import headerBackground from './header.jpg'; // eslint-disable-line no-unused-vars
 
 const styles = {
   header: {
