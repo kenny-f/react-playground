@@ -9,6 +9,7 @@
     "deploy": "NODE_ENV=production webpack -p --config webpack.production.config.js",
     "dev": "webpack-dev-server",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
+    "lint:precommit": "eslint . --ext .js --ext .jsx;",
     "test": "mocha --compilers js:babel-core/register --require ./test/test-helper.js 'test/**/.@(js|jsx)'",
     "test:watch": "npm test -- --watch",
     "start": "babel-node server"
@@ -72,6 +73,6 @@
     "react-router": "^1.0.2"
   },
   "pre-commit": [
-    "lint"
+    "lint:precommit"
   ]
 }
