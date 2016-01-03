@@ -11,4 +11,8 @@ class Root extends React.Component {
   }
 }
 
+Root.propTypes = {
+  routes: React.PropTypes.element,
+};
+
 export default Root;

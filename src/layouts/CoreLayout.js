@@ -19,4 +19,8 @@ class CoreLayout extends React.Component {
   }
 }
 
+CoreLayout.propTypes = {
+  children: React.PropTypes.node,
+};
+
 export default CoreLayout;
