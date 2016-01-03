@@ -15,6 +15,7 @@ class Button extends React.Component {
 
 Button.propTypes = {
   kind: React.PropTypes.oneOf(['default', 'primary']).isRequired,
+  children: React.PropTypes.node,
 };
 
 export default radium(Button);

@@ -1,3 +1,4 @@
+// noinspection Eslint
 import headerBackground from './header.jpg';
 
 const styles = {
