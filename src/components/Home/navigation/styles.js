@@ -1,4 +1,9 @@
 const styles = {
+  navbarAffix: {
+    'backgroundColor': '#fff',
+    'padding': '40px',
+  },
+
   navbarStyle: {
     borderColor: 'rgba(34,34,34,.05)',
     fontFamily: "'Open Sans','Helvetica Neue',Arial,sans-serif",

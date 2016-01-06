@@ -6,7 +6,7 @@ import styles from './styles';
 class Navigation extends React.Component {
   render() {
     return (
-      <Affix offsetTop={100}>
+      <Affix offsetTop={100} affixStyle={styles.navbarAffix}>
         <nav id="mainNav"
              className="navbar navbar-default navbar-fixed-top"
              style={styles.navbarStyle}
