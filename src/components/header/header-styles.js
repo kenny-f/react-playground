@@ -1,4 +1,4 @@
-import headerBackground from './header.jpg'; // eslint-disable-line no-unused-vars
+import './header.jpg';
 
 const styles = {
   header: {
