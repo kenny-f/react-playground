@@ -34,12 +34,17 @@ const styles = {
   },
   headerContentInner: {
     '@media (min-width:768px)': {
-      position: 'absolute',
-      top: '50%',
-      padding: '0 50px',
-      WebkitTransform: 'translateY(-50%)',
-      MsTransform: 'translateY(-50%)',
-      transform: 'translateY(-50%)',
+      //margin-right: auto;
+//margin-left: auto;
+//max-width: 1000px;
+      'margin-right': 'auto',
+      'margin-left': 'auto',
+      'max-width': '1000px',
+      //top: '50%',
+      //padding: '0 50px',
+      //WebkitTransform: 'translateY(-50%)',
+      //MsTransform: 'translateY(-50%)',
+      //transform: 'translateY(-50%)',
     },
   },
   headerTitle: {
