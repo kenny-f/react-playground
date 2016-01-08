@@ -8,10 +8,10 @@ const styles = {
     color: '#fff',
     backgroundImage: 'url("img/header.jpg")',
     backgroundPosition: 'center',
-    'WebkitBackgroundSize': 'cover',
-    'MozBackgroundSize': 'cover',
-    'backgroundSize': 'cover',
-    'OBackgroundSize': 'cover',
+    WebkitBackgroundSize: 'cover',
+    MozBackgroundSize: 'cover',
+    backgroundSize: 'cover',
+    OBackgroundSize: 'cover',
 
     '@media (min-width:768px)': {
       'minHeight': '100vh',
@@ -34,9 +34,9 @@ const styles = {
   },
   headerContentInner: {
     '@media (min-width:768px)': {
-      'marginRight': 'auto',
-      'marginLeft': 'auto',
-      'maxWidth': '1000px',
+      marginRight: 'auto',
+      marginLeft: 'auto',
+      maxWidth: '1000px',
     },
   },
   headerTitle: {

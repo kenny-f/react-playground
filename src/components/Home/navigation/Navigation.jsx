@@ -2,6 +2,7 @@ import React from 'react';
 import radium from 'radium';
 import Affix from 'react-overlays/lib/Affix';
 import styles from './styles';
+import {Link} from 'react-router';
 
 class Navigation extends React.Component {
   render() {
@@ -36,25 +37,25 @@ class Navigation extends React.Component {
                   <a className="page-scroll"
                      style={styles.navItem}
                      key="about"
-                     href="#about">About</a>
+                     href="#about">About
+                  </a>
                 </li>
                 <li>
                   <a className="page-scroll"
                      style={styles.navItem}
                      key="services"
-                     href="#services">Services</a>
+                     href="#services">Services
+                  </a>
                 </li>
                 <li>
                   <a className="page-scroll"
                      style={styles.navItem}
                      key="contact"
-                     href="#contact">Contact</a>
+                     href="#contact">Contact
+                  </a>
                 </li>
                 <li>
-                  <a className="page-scroll"
-                     style={styles.navItem}
-                     key="login"
-                     href="#contact">Login</a>
+                  <Link to="/login" style={styles.navItem}>Login</Link>
                 </li>
               </ul>
             </div>
