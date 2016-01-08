@@ -64,7 +64,48 @@ class LoginForm extends React.Component {
         transition: 'all .3s',
       },
       btn: {
+        width: '100%',
+        margin: '0',
+        padding: '0 20px',
+        verticalAlign: 'middle',
+        background: '#4aaf51',
+        border: 0,
+        fontFamily: 'Roboto, sans-serif',
+        fontSize: '16px',
+        fontWeight: 300,
+        lineHeight: '50px',
+        color: '#fff',
+        MozBorderRadius: '4px',
+        WebkitBorderRadius: '4px',
+        borderRadius: '4px',
+        textShadow: 'none',
+        MozBoxShadow: 'none',
+        WebkitBoxShadow: 'none',
+        boxShadow: 'none',
+        OTransition: 'all .3s',
+        MozTransition: 'all .3s',
+        WebkitTransition: 'all .3s',
+        MsTransition: 'all .3s',
+        transition: 'all .3s',
+
+        ':hover': {
+          opacity: 0.6,
+          color: '#fff',
+        }
       },
+      socialBtn: {
+        background: '#4862a3',
+        display: 'inline-block',
+        height: '50px',
+        margin: '5px',
+        padding: '16px 20px 0 20px',
+        fontFamily: 'Roboto, sans-serif',
+        fontSize: '16px',
+        fontWeight: '300',
+        lineHeight: '30px',
+        borderRadius: '4px',
+        color: '#fff',
+      }
     };
 
     return (
@@ -115,17 +156,17 @@ class LoginForm extends React.Component {
               </div>
             </div>
             <div className="row">
-              <div class="col-sm-6 col-sm-offset-3 social-login">
-                <h3>...or login with:</h3>
-                <div class="social-login-buttons">
-                  <a class="btn btn-link-1 btn-link-1-facebook" href="#">
-                    <i class="fa fa-facebook"/> Facebook
+              <div className="col-sm-6 col-sm-offset-3" style={{ marginTop: '35px' }}>
+                <h3 style={{ color: '#fff', fontSize: '22px', fontWeight: 300,  fontFamily: 'Roboto, sans-serif', textAlign: 'center'}}>...or login with:</h3>
+                <div style={{marginTop:'25px'}}>
+                  <a className="btn" href="#" style={styles.socialBtn}>
+                    <i className="fa fa-facebook" style={{paddingRight: '5px', verticalAlign: 'middle', fontSize: '20px', lineHeight: '20px'}}/> Facebook
                   </a>
-                  <a class="btn btn-link-1 btn-link-1-twitter" href="#">
-                    <i class="fa fa-twitter"/> Twitter
+                  <a className="btn" href="#">
+                    <i className="fa fa-twitter"/> Twitter
                   </a>
-                  <a class="btn btn-link-1 btn-link-1-google-plus" href="#">
-                    <i class="fa fa-google-plus"/> Google Plus
+                  <a className="btn" href="#">
+                    <i className="fa fa-google-plus"/> Google Plus
                   </a>
                 </div>
               </div>

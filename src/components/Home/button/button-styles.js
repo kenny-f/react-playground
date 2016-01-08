@@ -7,22 +7,20 @@ const styles = {
     textTransform: 'uppercase',
     fontFamily: "'Open Sans','Helvetica Neue',Arial,sans-serif",
     fontWeight: 700,
+    WebkitTransition: 'all .35s',
+    MozTransition: 'all .35s',
+    transition: 'all .35s',
   },
   default: {
     borderColor: settings.colors.white,
     color: settings.colors.black,
     backgroundColor: settings.colors.white,
-    WebkitTransition: 'all .35s',
-    MozTransition: 'all .35s',
-    transition: 'all .35s',
+
   },
   primary: {
     borderColor: settings.colors.orange,
     color: settings.colors.white,
     backgroundColor: settings.colors.orange,
-    WebkitTransition: 'all .35s',
-    MozTransition: 'all .35s',
-    transition: 'all .35s',
   },
   xl: {
     padding: '15px 30px',
