@@ -4,11 +4,12 @@ import radium from 'radium';
 class Icon extends React.Component {
   render() {
     const {
-      type,
+      className,
       ...other,
       } = this.props;
+
     return (
-      <i className={className} {...other}/>
+      <i className={this.props.className} {...other}/>
     );
   }
 }

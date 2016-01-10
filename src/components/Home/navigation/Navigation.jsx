@@ -2,7 +2,7 @@ import React from 'react';
 import radium from 'radium';
 import Affix from 'react-overlays/lib/Affix';
 import styles from './styles';
-import {Link} from 'react-router';
+import { Link } from 'react-router';
 
 class Navigation extends React.Component {
   render() {

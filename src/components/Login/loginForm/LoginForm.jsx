@@ -1,6 +1,8 @@
 import React from 'react';
 import radium from 'radium';
 
+import Icon from '../../icon/Icon';
+
 class LoginForm extends React.Component {
   render() {
     const styles = {
@@ -91,7 +93,7 @@ class LoginForm extends React.Component {
         ':hover': {
           opacity: 0.6,
           color: '#fff',
-        }
+        },
       },
       socialBtn: {
         background: '#4862a3',
@@ -102,25 +104,28 @@ class LoginForm extends React.Component {
         fontFamily: 'Roboto, sans-serif',
         fontSize: '16px',
         fontWeight: '300',
-        lineHeight: '30px',
+        lineHeight: '16px',
         borderRadius: '4px',
         color: '#fff',
-      }
+      },
     };
 
     return (
-      <div className="top-content">
+      <div>
 
         <div style={styles.innerBg}>
           <div className="container">
             <div className="row">
               <div className="col-sm-8 col-sm-offset-2 text">
-                <h1 style={{ marginTop: '10px', fontSize: '38px', fontFamily: 'Roboto, sans-serif', fontWeight: 100, color: '#fff', lineHeight: '50px', textAlign: 'center' }}>
+                <h1
+                  style={{ marginTop: '10px', fontSize: '38px', fontFamily: 'Roboto, sans-serif', fontWeight: 100, color: '#fff', lineHeight: '50px', textAlign: 'center' }}>
                   Login Form
                 </h1>
                 <div className="description" style={{ margin: '20px 0 10px 0' }}>
-                  <p style={{ color: '#fff', fontSize: '16px', fontFamily: 'Roboto, sans-serif', lineHeight: '30px', textAlign: 'center', opacity: 0.8 }}>
-                    This is a free responsive login form made with Bootstrap. This is some random text to fill in some more space.
+                  <p
+                    style={{ color: '#fff', fontSize: '16px', fontFamily: 'Roboto, sans-serif', lineHeight: '30px', textAlign: 'center', opacity: 0.8 }}>
+                    This is a free responsive login form made with Bootstrap. This is some random text to fill in some
+                    more space.
                   </p>
                 </div>
               </div>
@@ -129,8 +134,11 @@ class LoginForm extends React.Component {
               <div className="col-sm-6 col-sm-offset-3" style={{ marginTop: '35px' }}>
                 <div style={styles.formTop}>
                   <div style={styles.formTopLeft}>
-                    <h3 style={{ marginTop: 0, fontSize: '22px', fontWeight: 300, color: '#555', lineHeight: '30px', fontFamily: 'Roboto, sans-serif' }}>Login to our site</h3>
-                    <p style={{ color: '#888', fontSize: '16px', fontWeight: 300, lineHeight: '30px', fontFamily: 'Roboto, sans-serif' }}>
+                    <h3
+                      style={{ marginTop: 0, fontSize: '22px', fontWeight: 300, color: '#555', lineHeight: '30px', fontFamily: 'Roboto, sans-serif' }}>
+                      Login to our site</h3>
+                    <p
+                      style={{ color: '#888', fontSize: '16px', fontWeight: 300, lineHeight: '30px', fontFamily: 'Roboto, sans-serif' }}>
                       Enter your username and password to log on:
                     </p>
                   </div>
@@ -157,15 +165,19 @@ class LoginForm extends React.Component {
             </div>
             <div className="row">
               <div className="col-sm-6 col-sm-offset-3" style={{ marginTop: '35px' }}>
-                <h3 style={{ color: '#fff', fontSize: '22px', fontWeight: 300,  fontFamily: 'Roboto, sans-serif', textAlign: 'center'}}>...or login with:</h3>
-                <div style={{marginTop:'25px'}}>
+                <h3
+                  style={{ color: '#fff', fontSize: '22px', fontWeight: 300, fontFamily: 'Roboto, sans-serif', textAlign: 'center' }}>
+                  ...or login with:</h3>
+                <div style={{ marginTop: '25px' }}>
                   <a className="btn" href="#" style={styles.socialBtn}>
-                    <i className="fa fa-facebook" style={{paddingRight: '5px', verticalAlign: 'middle', fontSize: '20px', lineHeight: '20px'}}/> Facebook
+                    <Icon className="fa fa-facebook"
+                       style={{ paddingRight: '5px', verticalAlign: 'middle', fontSize: '20px', lineHeight: '20px' }}/>
+                    Facebook
                   </a>
-                  <a className="btn" href="#">
+                  <a className="btn" href="#" style={styles.socialBtn}>
                     <i className="fa fa-twitter"/> Twitter
                   </a>
-                  <a className="btn" href="#">
+                  <a className="btn" href="#" style={styles.socialBtn}>
                     <i className="fa fa-google-plus"/> Google Plus
                   </a>
                 </div>
