@@ -1,20 +1,18 @@
 const styles = {
   navbarAffix: {
-    'backgroundColor': '#fff',
-    'padding': '40px',
+    backgroundColor: '#fff',
+    padding: '40px',
   },
 
   navbarStyle: {
     borderColor: 'rgba(34,34,34,.05)',
     fontFamily: "'Open Sans','Helvetica Neue',Arial,sans-serif",
     backgroundColor: '#fff',
-    'WebkitTransition': 'all .35s',
-    'MozTransition': 'all .35s',
-    'transition': 'all .35s',
+    transition: 'all .35s',
 
     '@media (min-width:768px)': {
-      'borderColor': 'rgba(255,255,255,.3)',
-      'backgroundColor': 'transparent',
+      borderColor: 'rgba(255,255,255,.3)',
+      backgroundColor: 'transparent',
     },
   },
   brand: {

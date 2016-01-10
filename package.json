@@ -10,6 +10,7 @@
     "dev": "webpack-dev-server",
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
     "lint:precommit": "eslint . --ext .js --ext .jsx;",
+    "lint:watch": "watch 'npm run lint' ./",
     "test": "mocha --compilers js:babel-core/register --require ./test/test-helper.js 'test/**/.@(js|jsx)'",
     "test:watch": "npm test -- --watch",
     "start": "babel-node server"
@@ -53,6 +54,7 @@
     "redbox-react": "^1.2.0",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.7",
+    "watch": "^0.17.1",
     "webpack": "^1.12.9",
     "webpack-dev-middleware": "^1.4.0",
     "webpack-dev-server": "^1.14.0",
@@ -73,6 +75,5 @@
     "react-router": "^1.0.2"
   },
   "pre-commit": [
-    "lint:precommit"
   ]
 }
