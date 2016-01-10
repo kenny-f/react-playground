@@ -1,7 +1,7 @@
 import React from 'react';
 import radium from 'radium';
 
-import Icon from '../../icon/Icon';
+import SocialBtn from '../../socialBtn';
 
 class LoginForm extends React.Component {
   render() {
@@ -95,19 +95,6 @@ class LoginForm extends React.Component {
           color: '#fff',
         },
       },
-      socialBtn: {
-        background: '#4862a3',
-        display: 'inline-block',
-        height: '50px',
-        margin: '5px',
-        padding: '16px 20px 0 20px',
-        fontFamily: 'Roboto, sans-serif',
-        fontSize: '16px',
-        fontWeight: '300',
-        lineHeight: '16px',
-        borderRadius: '4px',
-        color: '#fff',
-      },
     };
 
     return (
@@ -169,17 +156,15 @@ class LoginForm extends React.Component {
                   style={{ color: '#fff', fontSize: '22px', fontWeight: 300, fontFamily: 'Roboto, sans-serif', textAlign: 'center' }}>
                   ...or login with:</h3>
                 <div style={{ marginTop: '25px' }}>
-                  <a className="btn" href="#" style={styles.socialBtn}>
-                    <Icon className="fa fa-facebook"
-                       style={{ paddingRight: '5px', verticalAlign: 'middle', fontSize: '20px', lineHeight: '20px' }}/>
+                  <SocialBtn href="#" type="facebook">
                     Facebook
-                  </a>
-                  <a className="btn" href="#" style={styles.socialBtn}>
-                    <i className="fa fa-twitter"/> Twitter
-                  </a>
-                  <a className="btn" href="#" style={styles.socialBtn}>
-                    <i className="fa fa-google-plus"/> Google Plus
-                  </a>
+                  </SocialBtn>
+                  <SocialBtn href="#" type="twitter">
+                    Twitter
+                  </SocialBtn>
+                  <SocialBtn href="#" type="google-plus">
+                    Google Plus
+                  </SocialBtn>
                 </div>
               </div>
             </div>
