@@ -6,7 +6,6 @@ import SocialBtn from '../../socialBtn';
 class LoginForm extends React.Component {
   render() {
     const styles = {
-      topContent: {},
       innerBg: {
         padding: '100px 0 170px 0',
       },
@@ -95,6 +94,45 @@ class LoginForm extends React.Component {
           color: '#fff',
         },
       },
+      hthree: {
+        color: '#fff',
+        fontSize: '22px',
+        fontWeight: 300,
+        fontFamily: 'Roboto, sans-serif',
+        textAlign: 'center',
+      },
+      p: {
+        color: '#888',
+        fontSize: '16px',
+        fontWeight: 300,
+        lineHeight: '30px',
+        fontFamily: 'Roboto, sans-serif',
+      },
+      logintooursite: {
+        marginTop: 0,
+        fontSize: '22px',
+        fontWeight: 300,
+        color: '#555',
+        lineHeight: '30px',
+        fontFamily: 'Roboto, sans-serif',
+      },
+      pp: {
+        color: '#fff',
+        fontSize: '16px',
+        fontFamily: 'Roboto, sans-serif',
+        lineHeight: '30px',
+        textAlign: 'center',
+        opacity: 0.8,
+      },
+      h1: {
+        marginTop: '10px',
+        fontSize: '38px',
+        fontFamily: 'Roboto, sans-serif',
+        fontWeight: 100,
+        color: '#fff',
+        lineHeight: '50px',
+        textAlign: 'center',
+      },
     };
 
     return (
@@ -104,15 +142,13 @@ class LoginForm extends React.Component {
           <div className="container">
             <div className="row">
               <div className="col-sm-8 col-sm-offset-2 text">
-                <h1
-                  style={{ marginTop: '10px', fontSize: '38px', fontFamily: 'Roboto, sans-serif', fontWeight: 100, color: '#fff', lineHeight: '50px', textAlign: 'center' }}>
+                <h1 style={styles.h1}>
                   Login Form
                 </h1>
                 <div className="description" style={{ margin: '20px 0 10px 0' }}>
-                  <p
-                    style={{ color: '#fff', fontSize: '16px', fontFamily: 'Roboto, sans-serif', lineHeight: '30px', textAlign: 'center', opacity: 0.8 }}>
-                    This is a free responsive login form made with Bootstrap. This is some random text to fill in some
-                    more space.
+                  <p style={styles.pp}>
+                    This is a free responsive login form made with Bootstrap.
+                    This is some random text to fill in some more space.
                   </p>
                 </div>
               </div>
@@ -121,11 +157,10 @@ class LoginForm extends React.Component {
               <div className="col-sm-6 col-sm-offset-3" style={{ marginTop: '35px' }}>
                 <div style={styles.formTop}>
                   <div style={styles.formTopLeft}>
-                    <h3
-                      style={{ marginTop: 0, fontSize: '22px', fontWeight: 300, color: '#555', lineHeight: '30px', fontFamily: 'Roboto, sans-serif' }}>
-                      Login to our site</h3>
-                    <p
-                      style={{ color: '#888', fontSize: '16px', fontWeight: 300, lineHeight: '30px', fontFamily: 'Roboto, sans-serif' }}>
+                    <h3 style={styles.logintooursite}>
+                      Login to our site
+                    </h3>
+                    <p style={styles.p}>
                       Enter your username and password to log on:
                     </p>
                   </div>
@@ -137,13 +172,25 @@ class LoginForm extends React.Component {
                   <form role="form" action="" method="post">
                     <div className="form-group">
                       <label className="sr-only" htmlFor="form-username">Username</label>
-                      <input type="text" name="form-username" placeholder="Username..."
-                             className="form-control" id="form-username" style={styles.formInput}/>
+                      <input
+                        type="text"
+                        name="form-username"
+                        placeholder="Username..."
+                        className="form-control"
+                        id="form-username"
+                        style={styles.formInput}
+                      />
                     </div>
                     <div className="form-group">
                       <label className="sr-only" htmlFor="form-password">Password</label>
-                      <input type="password" name="form-password" placeholder="Password..."
-                             className="form-control" id="form-password" style={styles.formInput}/>
+                      <input
+                        type="password"
+                        name="form-password"
+                        placeholder="Password..."
+                        className="form-control"
+                        id="form-password"
+                        style={styles.formInput}
+                      />
                     </div>
                     <button type="submit" className="btn" style={styles.btn}>Sign in!</button>
                   </form>
@@ -151,10 +198,13 @@ class LoginForm extends React.Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-sm-6 col-sm-offset-3" style={{ marginTop: '35px', textAlign: 'center'}}>
-                <h3
-                  style={{ color: '#fff', fontSize: '22px', fontWeight: 300, fontFamily: 'Roboto, sans-serif', textAlign: 'center' }}>
-                  ...or login with:</h3>
+              <div
+                className="col-sm-6 col-sm-offset-3"
+                style={{ marginTop: '35px', textAlign: 'center' }}
+              >
+                <h3 style={styles.hthree}>
+                  ...or login with:
+                </h3>
                 <div style={{ marginTop: '25px' }}>
                   <SocialBtn href="#" type="facebook">
                     Facebook
