@@ -3,6 +3,8 @@ import radium from 'radium';
 
 import SocialBtn from '../../socialBtn';
 
+const { Style } = radium;
+
 class LoginForm extends React.Component {
   render() {
     const styles = {
@@ -35,8 +37,6 @@ class LoginForm extends React.Component {
       formBottom: {
         padding: '25px 25px 30px 25px',
         background: '#eee',
-        MozBorderRadius: '0 0 4px 4px',
-        WebkitBorderRadius: '0 0 4px 4px',
         borderRadius: '0 0 4px 4px',
         textAlign: 'left',
       },
@@ -52,16 +52,8 @@ class LoginForm extends React.Component {
         fontWeight: 300,
         lineHeight: '50px',
         color: '#888',
-        MozBorderRadius: '4px',
-        WebkitBorderRadius: '4px',
         borderRadius: '4px',
-        MozBoxShadow: 'none',
-        WebkitBoxShadow: 'none',
         boxShadow: 'none',
-        OTransition: 'all .3s',
-        MozTransition: 'all .3s',
-        WebkitTransition: 'all .3s',
-        MsTransition: 'all .3s',
         transition: 'all .3s',
       },
       btn: {
@@ -76,17 +68,9 @@ class LoginForm extends React.Component {
         fontWeight: 300,
         lineHeight: '50px',
         color: '#fff',
-        MozBorderRadius: '4px',
-        WebkitBorderRadius: '4px',
         borderRadius: '4px',
         textShadow: 'none',
-        MozBoxShadow: 'none',
-        WebkitBoxShadow: 'none',
         boxShadow: 'none',
-        OTransition: 'all .3s',
-        MozTransition: 'all .3s',
-        WebkitTransition: 'all .3s',
-        MsTransition: 'all .3s',
         transition: 'all .3s',
 
         ':hover': {
@@ -98,28 +82,24 @@ class LoginForm extends React.Component {
         color: '#fff',
         fontSize: '22px',
         fontWeight: 300,
-        fontFamily: 'Roboto, sans-serif',
         textAlign: 'center',
+      },
+      hthreelogintooursite: {
+        marginTop: 0,
+        fontSize: '22px',
+        fontWeight: 300,
+        color: '#555',
+        lineHeight: '30px',
       },
       p: {
         color: '#888',
         fontSize: '16px',
         fontWeight: 300,
         lineHeight: '30px',
-        fontFamily: 'Roboto, sans-serif',
-      },
-      logintooursite: {
-        marginTop: 0,
-        fontSize: '22px',
-        fontWeight: 300,
-        color: '#555',
-        lineHeight: '30px',
-        fontFamily: 'Roboto, sans-serif',
       },
       pp: {
         color: '#fff',
         fontSize: '16px',
-        fontFamily: 'Roboto, sans-serif',
         lineHeight: '30px',
         textAlign: 'center',
         opacity: 0.8,
@@ -127,7 +107,6 @@ class LoginForm extends React.Component {
       h1: {
         marginTop: '10px',
         fontSize: '38px',
-        fontFamily: 'Roboto, sans-serif',
         fontWeight: 100,
         color: '#fff',
         lineHeight: '50px',
@@ -136,8 +115,17 @@ class LoginForm extends React.Component {
     };
 
     return (
-      <div>
+      <div className="loginPage">
+        <Style
+          scopeSelector=".loginPage"
+          rules={{
+            'h1, h3, p': {
+            fontFamily: 'Roboto, sans-serif'
+            },
+          }}
+        >
 
+        </Style>
         <div style={styles.innerBg}>
           <div className="container">
             <div className="row">
@@ -157,7 +145,7 @@ class LoginForm extends React.Component {
               <div className="col-sm-6 col-sm-offset-3" style={{ marginTop: '35px' }}>
                 <div style={styles.formTop}>
                   <div style={styles.formTopLeft}>
-                    <h3 style={styles.logintooursite}>
+                    <h3 style={styles.hthreelogintooursite}>
                       Login to our site
                     </h3>
                     <p style={styles.p}>
