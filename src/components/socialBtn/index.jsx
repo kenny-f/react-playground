@@ -19,6 +19,12 @@ class SocialBtn extends React.Component {
         lineHeight: '16px',
         borderRadius: '4px',
         color: '#fff',
+
+        ':hover': {
+          outline: 0,
+          opacity: 0.6,
+          color: '#fff',
+  }
       },
     };
 
