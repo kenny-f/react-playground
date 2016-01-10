@@ -25,11 +25,12 @@ class SocialBtn extends React.Component {
     const {
       className,
       type,
+      style,
       ...other,
       } = this.props;
 
     return (
-      <a className="btn" href="#" style={styles.base}>
+      <a className="btn" href="#" style={[styles.base, this.props.style]}>
         <Icon className={`fa fa-${this.props.type}`}
               style={{ paddingRight: '5px', verticalAlign: 'middle', fontSize: '20px', lineHeight: '20px' }}/>
         {this.props.children}

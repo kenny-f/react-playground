@@ -151,7 +151,7 @@ class LoginForm extends React.Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-sm-6 col-sm-offset-3" style={{ marginTop: '35px' }}>
+              <div className="col-sm-6 col-sm-offset-3" style={{ marginTop: '35px', textAlign: 'center'}}>
                 <h3
                   style={{ color: '#fff', fontSize: '22px', fontWeight: 300, fontFamily: 'Roboto, sans-serif', textAlign: 'center' }}>
                   ...or login with:</h3>
@@ -159,10 +159,10 @@ class LoginForm extends React.Component {
                   <SocialBtn href="#" type="facebook">
                     Facebook
                   </SocialBtn>
-                  <SocialBtn href="#" type="twitter">
+                  <SocialBtn href="#" type="twitter" style={{ background: '#55acee' }}>
                     Twitter
                   </SocialBtn>
-                  <SocialBtn href="#" type="google-plus">
+                  <SocialBtn href="#" type="google-plus" style={{ background: '#dd4b39' }}>
                     Google Plus
                   </SocialBtn>
                 </div>
