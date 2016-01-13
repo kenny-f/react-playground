@@ -24,7 +24,13 @@ class SocialBtn extends React.Component {
           outline: 0,
           opacity: 0.6,
           color: '#fff',
-  }
+        },
+      },
+      iconBase: {
+        paddingRight: '5px',
+        verticalAlign: 'middle',
+        fontSize: '20px',
+        lineHeight: '20px',
       },
     };
 
@@ -37,8 +43,10 @@ class SocialBtn extends React.Component {
 
     return (
       <a className="btn" href="#" style={[styles.base, this.props.style]}>
-        <Icon className={`fa fa-${this.props.type}`}
-              style={{ paddingRight: '5px', verticalAlign: 'middle', fontSize: '20px', lineHeight: '20px' }}/>
+        <Icon
+          className={`fa fa-${this.props.type}`}
+          style={styles.iconBase}
+        />
         {this.props.children}
       </a>
     );
@@ -46,8 +54,10 @@ class SocialBtn extends React.Component {
 }
 
 SocialBtn.propTypes = {
+  children: React.PropTypes.node,
   className: React.PropTypes.string,
-  type: React.PropTypes.string
+  type: React.PropTypes.string,
+  style: React.PropTypes.oneOfType([React.PropTypes.object, React.PropTypes.array]),
 };
 
 export default radium(SocialBtn);

@@ -14,7 +14,7 @@ const styles = {
     OBackgroundSize: 'cover',
 
     '@media (min-width:768px)': {
-      'minHeight': '100vh',
+      minHeight: '100vh',
     },
   },
   headerContent: {

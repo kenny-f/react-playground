@@ -120,12 +120,11 @@ class LoginForm extends React.Component {
           scopeSelector=".loginPage"
           rules={{
             'h1, h3, p': {
-            fontFamily: 'Roboto, sans-serif'
+              fontFamily: 'Roboto, sans-serif',
             },
           }}
-        >
+        />
 
-        </Style>
         <div style={styles.innerBg}>
           <div className="container">
             <div className="row">

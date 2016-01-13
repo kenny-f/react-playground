@@ -13,8 +13,9 @@ class Header extends React.Component {
           <div style={styles.headerContentInner}>
             <h1 style={styles.headerTitle}>Your Favorite Source of Free Bootstrap Themes</h1>
             <Line/>
-            <p style={styles.headerParagraph}>Start Bootstrap can help you build better websites using the Bootstrap CSS framework! Just
-              download your template and start going, no strings attached!</p>
+            <p style={styles.headerParagraph}>
+              Start Bootstrap can help you build better websites using the Bootstrap CSS framework!
+              Just download your template and start going, no strings attached!</p>
             {/* <a href="#about" className="page-scroll" styleName="btn">Find Out More</a> */}
             <Button kind="primary">Find Out More</Button>
           </div>

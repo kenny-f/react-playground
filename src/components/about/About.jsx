@@ -17,7 +17,10 @@ class About extends React.Component {
               </h2>
               <Line color="white"/>
                 <p style={styles.textFaded}>
-                  Start Bootstrap has everything you need to get your new website up and running in no time! All of the templates and themes on Start Bootstrap are open source, free to download, and easy to use. No strings attached!
+                  Start Bootstrap has everything you need to get your new website up and running in
+                  no time!
+                  All of the templates and themes on Start Bootstrap are open source,
+                  free to download, and easy to use. No strings attached!
                 </p>
                 <Button className="btn btn-default btn-xl" kind="default">Get Started!</Button>
             </div>
