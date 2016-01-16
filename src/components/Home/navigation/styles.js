@@ -10,7 +10,7 @@ const styles = {
     backgroundColor: '#fff',
     transition: 'all .35s',
 
-    '@media (min-width:768px)': {
+    '@media (minWidth:768px)': {
       borderColor: 'rgba(255,255,255,.3)',
       backgroundColor: 'transparent',
     },
@@ -27,7 +27,7 @@ const styles = {
       color: '#eb3812',
     },
 
-    '@media (min-width:768px)': {
+    '@media (minWidth:768px)': {
       color: 'rgba(255,255,255,.7)',
       ':hover': {
         color: '#fff',
@@ -46,7 +46,7 @@ const styles = {
     ':hover': {
       color: '#f05f40',
     },
-    '@media (min-width:768px)': {
+    '@media (minWidth:768px)': {
       color: 'rgba(255,255,255,.7)',
       ':hover': {
         color: '#fff',

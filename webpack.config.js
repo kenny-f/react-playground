@@ -17,7 +17,7 @@ module.exports = {
     //'webpack/hot/dev-server',
     //'webpack-dev-server/client?http://localhost:8080',
     'webpack-hot-middleware/client?reload=true',
-    path.resolve(__dirname, 'src/app.js')
+    path.resolve(__dirname, 'src/index.js')
   ],
   output: {
     path: PATHS.dist,

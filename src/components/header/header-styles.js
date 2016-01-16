@@ -13,7 +13,7 @@ const styles = {
     backgroundSize: 'cover',
     OBackgroundSize: 'cover',
 
-    '@media (min-width:768px)': {
+    '@media (minWidth:768px)': {
       minHeight: '100vh',
     },
   },
@@ -23,7 +23,7 @@ const styles = {
     padding: '100px 15px',
     textAlign: 'center',
 
-    '@media (min-width:768px)': {
+    '@media (minWidth:768px)': {
       position: 'absolute',
       top: '50%',
       padding: '0 50px',
@@ -33,7 +33,7 @@ const styles = {
     },
   },
   headerContentInner: {
-    '@media (min-width:768px)': {
+    '@media (minWidth:768px)': {
       marginRight: 'auto',
       marginLeft: 'auto',
       maxWidth: '1000px',
@@ -54,7 +54,7 @@ const styles = {
     fontWeight: 300,
     color: 'rgba(255,255,255,.7)',
 
-    '@media (min-width:768px)': {
+    '@media (minWidth:768px)': {
       marginRight: 'auto',
       marginLeft: 'auto',
       maxWidth: '80%',

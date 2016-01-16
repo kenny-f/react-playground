@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { Component, PropTypes } from 'react';
 import radium from 'radium';
 import styles from './line-styles';
 
-class Line extends React.Component {
+class Line extends Component {
   render() {
     return (
       <hr style={[styles.base, styles[this.props.color]]}/>
@@ -11,7 +11,7 @@ class Line extends React.Component {
 }
 
 Line.propTypes = {
-  color: React.PropTypes.string,
+  color: PropTypes.string,
 };
 
 export default radium(Line);

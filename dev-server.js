@@ -2,7 +2,7 @@
 import path from 'path';
 import express from 'express';
 import webpack from 'webpack';
-import webpackMiddleware from 'webpack-dev-middleware';
+import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 
 import config from './webpack.config.js';
@@ -14,7 +14,7 @@ const app = express();
 
 if (isDev) {
   const compiler = webpack(config);
-  const middleware = webpackMiddleware(compiler, {
+  const middleware = webpackDevMiddleware(compiler, {
     publicPath: config.output.publicPath,
     //  contentBase: 'src',
     stats: {
