@@ -1,7 +1,29 @@
 {
   "parser": "babel-eslint",
   "extends": "airbnb",
+  "rules": {
+    "new-cap": [2, {
+      "capIsNewExceptions": [
+        "Map",
+        "Set",
+        "List"
+      ]
+    }]
+  },
   "plugins": [
     "babel"
-  ]
+  ],
+  "globals": {
+    "describe": true,
+    "xdescribe": true,
+    "it": true,
+    "xit": true,
+    "before": true,
+    "beforeEach": true,
+    "after": true,
+    "afterEach": true,
+    "expect": true,
+    "sandbox": true,
+    "sinon": true,
+  }
 }

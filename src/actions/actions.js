@@ -1,30 +1,24 @@
-export const LOGIN_REQUEST = 'LOGIN_REQUEST';
-export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
-export const LOGIN_FAILURE = 'LOGIN_FAILURE';
+import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE } from '../constants';
 
-function requestLogin(creds) {
+export function requestLogin(creds) {
   return {
     type: LOGIN_REQUEST,
-    isFetching: true,
-    isAuthenticated: false,
     creds,
   };
 }
 
-function receiveLogin(user) {
+export function receiveLogin(user) {
   return {
     type: LOGIN_SUCCESS,
-    isFetching: false,
-    isAuthenticated: true,
     id_token: user.id_token,
   };
 }
 
-function loginError(message) {
+export function loginError(message) {
   return {
     type: LOGIN_FAILURE,
-    isFetching: false,
-    isAuthenticated: true,
+    // isFetching: false,
+    // isAuthenticated: true,
     message,
   };
 }

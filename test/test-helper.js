@@ -14,5 +14,4 @@ Object.keys(window).forEach((key) => {
   }
 });
 
-chai.should();
 chai.use(chaiImmutable);

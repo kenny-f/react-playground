@@ -1,7 +1,21 @@
-import { Map } from 'immutable';
+import { Map, fromJS } from 'immutable';
 
-const initialState = Map();
+const initialState = fromJS({
+  isFetching: false,
+  isAuthenticated: false,
+});
 
-const userReducer = function(state = initialState, action) {
+function user(state = initialState, action) {
+  switch (action.type) {
+    case 'LOGIN_REQUEST':
+      return state.merge({
+        isFetching: true,
+        isAuthenticated: false,
+        creds: action.creds,
+      });
+    default:
+      return state;
+  }
+}
 
-};
+export default user;
