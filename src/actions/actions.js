@@ -10,15 +10,13 @@ export function requestLogin(creds) {
 export function receiveLogin(user) {
   return {
     type: LOGIN_SUCCESS,
-    id_token: user.id_token,
+    token: user.token,
   };
 }
 
 export function loginError(message) {
   return {
     type: LOGIN_FAILURE,
-    // isFetching: false,
-    // isAuthenticated: true,
     message,
   };
 }

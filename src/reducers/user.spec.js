@@ -17,14 +17,43 @@ describe('user reducer', () => {
     const creds = { email: '123' };
     const action = {
       type: 'LOGIN_REQUEST',
-      isFetching: true,
-      isAuthenticated: false,
       creds,
     };
     const expectedState = Immuatable({
       isFetching: true,
       isAuthenticated: false,
       creds,
+    });
+    const nextState = userReducer(undefined, action);
+
+    expect(nextState).to.deep.equal(expectedState);
+  });
+
+  it('handles LOGIN_SUCCESS', () => {
+    const user = { token: '123' };
+    const action = {
+      type: 'LOGIN_SUCCESS',
+      user,
+    };
+    const expectedState = Immuatable({
+      isFetching: false,
+      isAuthenticated: true,
+      token: user.token,
+    });
+    const nextState = userReducer(undefined, action);
+
+    expect(nextState).to.deep.equal(expectedState);
+  });
+
+  it('handles LOGIN_FAILURE', () => {
+    const action = {
+      type: 'LOGIN_FAILURE',
+      message: 'error message',
+    };
+    const expectedState = Immuatable({
+      isFetching: false,
+      isAuthenticated: false,
+      message: action.message,
     });
     const nextState = userReducer(undefined, action);
 

@@ -13,6 +13,7 @@ class App extends Component {
 }
 
 App.propTypes = {
+  requestLogin: PropTypes.function.isRequired,
 };
 
 const mapStateToProps = state => {

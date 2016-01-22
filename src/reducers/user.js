@@ -13,6 +13,18 @@ function user(state = initialState, action) {
         isAuthenticated: false,
         creds: action.creds,
       });
+    case 'LOGIN_SUCCESS':
+      return state.merge({
+        isFetching: false,
+        isAuthenticated: true,
+        token: action.user.token,
+      });
+    case 'LOGIN_FAILURE':
+      return state.merge({
+        isFetching: false,
+        isAuthenticated: false,
+        message: action.message,
+      });
     default:
       return state;
   }
