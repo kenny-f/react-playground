@@ -1,6 +1,6 @@
-import { Map, fromJS } from 'immutable';
+import Immutable from 'seamless-immutable';
 
-const initialState = fromJS({
+const initialState = Immutable({
   isFetching: false,
   isAuthenticated: false,
 });

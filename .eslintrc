@@ -4,9 +4,7 @@
   "rules": {
     "new-cap": [2, {
       "capIsNewExceptions": [
-        "Map",
-        "Set",
-        "List"
+        "Immuatable"
       ]
     }]
   },
