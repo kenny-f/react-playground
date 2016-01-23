@@ -4,7 +4,7 @@ const app = express();
 
 app.post('login', (res, req) => {
   console.log(JSON.stringify(res));
-  req.end();
+  setTimeout(() => req.send('login call from server'), 3000);
 });
 
 var port = 3001;
