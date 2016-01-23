@@ -10,7 +10,7 @@ export function requestLogin(creds) {
 export function receiveLogin(user) {
   return {
     type: LOGIN_SUCCESS,
-    token: user.token,
+    user,
   };
 }
 
