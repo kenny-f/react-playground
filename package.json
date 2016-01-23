@@ -13,7 +13,7 @@
     "lint:watch": "watch 'npm run lint' ./",
     "test": "mocha --compilers js:babel-core/register --require ./test/test-helper.js './src/**/*.spec*'",
     "test:watch": "npm test -- --watch",
-    "start": "babel-node server"
+    "start": "babel-node ."
   },
   "repository": {
     "type": "git",
