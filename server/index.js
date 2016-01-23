@@ -2,9 +2,11 @@ import express from 'express';
 
 const app = express();
 
-app.post('login', (res, req) => {
-  console.log(JSON.stringify(res));
-  setTimeout(() => req.send('login call from server'), 3000);
+app.get('/login', (res, req) => {
+  setTimeout(() => {
+    console.log('****** API: login done');
+    req.send('login call from server')
+  }, 3000);
 });
 
 var port = 3001;
