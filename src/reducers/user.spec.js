@@ -38,7 +38,7 @@ describe('user reducer', () => {
     const expectedState = Immuatable({
       isFetching: false,
       isAuthenticated: true,
-      user: user,
+      user,
     });
     const nextState = userReducer(undefined, action);
 

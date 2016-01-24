@@ -10,9 +10,8 @@ const logger = createLogger({
   },
 });
 
-
 const finalCreateStore = applyMiddleware(
-  sagaMiddleware(...loginSaga),  logger)(createStore);
+  sagaMiddleware(...loginSaga), logger)(createStore);
 
 export default function configureStore(initialState) {
   const store = finalCreateStore(rootReducer, initialState);
