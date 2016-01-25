@@ -1,22 +1,22 @@
 import { take, put, call } from 'redux-saga';
-import fetch from 'isomorphic-fetch';
+import 'isomorphic-fetch';
 import { receiveLogin } from '../actions/actions';
 
 const fetchLogin = () => {
-  console.log('fetch login called');
-  const req = new Request({
-    url: 'http://localhost:3001/login',
-    method: 'GET',
-  });
-  return fetch(req);
+  return fetch('http://localhost:3001/login')
+    .then(res => res.json())
+    .then(function (json) {
+      console.log('++++++++++++++', json);
+      return json;
+    });
 };
 
 function* login() {
   console.log('in login saga', 'waiting for LOGIN_REQUEST');
   yield take('LOGIN_REQUEST');
-  yield call(fetchLogin);
+  const res = yield call(fetchLogin);
   yield put(receiveLogin({
-    token: '123',
+    token: res,
   }));
 }
 
