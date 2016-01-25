@@ -13,7 +13,9 @@
     "lint:watch": "watch 'npm run lint' ./",
     "test": "mocha --compilers js:babel-core/register --require ./test/test-helper.js './src/**/*.spec*'",
     "test:watch": "npm test -- --watch",
-    "start": "babel-node ."
+    "start": "npm run start-client& npm run start-server&",
+    "start-client": "babel-node .",
+    "start-server": "nodemon --exec babel-node ./server --watch server"
   },
   "repository": {
     "type": "git",
