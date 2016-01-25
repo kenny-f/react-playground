@@ -6,7 +6,6 @@ const fetchLogin = () => {
   return fetch('http://localhost:3001/login')
     .then(res => res.json())
     .then(function (json) {
-      console.log('++++++++++++++', json);
       return json;
     });
 };
@@ -20,4 +19,4 @@ function* login() {
   }));
 }
 
-export default [login];
+export default login;

@@ -11,9 +11,8 @@
     "lint": "eslint . --ext .js --ext .jsx; exit 0",
     "lint:precommit": "eslint . --ext .js --ext .jsx;",
     "lint:watch": "watch 'npm run lint' ./",
-    "test": "tape -r babel-core/register './src/**/*.spec*'",
-    "test:mocha": "mocha --compilers js:babel-core/register --require ./test/test-helper.js './src/**/*.spec*'",
-    "test:watch": "npm test -- --watch",
+    "test": "tape -r babel-core/register ./src/**/*.spec*",
+    "test:watch": "watch \"npm test\" ./src",
     "start": "npm run start-client& npm run start-server&",
     "start-client": "babel-node .",
     "start-server": "nodemon --exec babel-node ./server --watch server"
