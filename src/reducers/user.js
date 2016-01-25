@@ -6,7 +6,6 @@ const initialState = Immutable({
 });
 
 function user(state = initialState, action) {
-  console.log('*** User Reducer ***');
   switch (action.type) {
     case 'LOGIN_REQUEST':
       return state.merge({
@@ -15,7 +14,6 @@ function user(state = initialState, action) {
         creds: action.creds,
       });
     case 'LOGIN_SUCCESS':
-      console.log('*** LOGIN_SUCCESS ***');
       return state.merge({
         isFetching: false,
         isAuthenticated: true,
