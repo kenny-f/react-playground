@@ -1,6 +1,7 @@
 import 'babel-polyfill';
 import assert from 'assert';
 import { take, call, put } from 'redux-saga';
+import { routeActions } from 'react-router-redux';
 
 import loginSaga from './login-saga';
 import { login } from '../api';
@@ -27,6 +28,11 @@ describe('login saga should', () => {
   it('dispatch login success action', () => {
     actual = saga.next().value;
     expected = put(receiveLogin());
+    assert.deepEqual(actual, expected);
+  });
+  it('call directs to dashboard', () => {
+    actual = saga.next().value;
+    expected = put(routeActions.push('/dashboard'));
     assert.deepEqual(actual, expected);
   });
   it('be done', () => {

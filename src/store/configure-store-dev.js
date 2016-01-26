@@ -20,7 +20,7 @@ const sagas = [
 const reduxRouterMiddleware = syncHistory(browserHistory);
 
 const finalCreateStore = applyMiddleware(
-  sagaMiddleware(...sagas), reduxRouterMiddleware,  logger)(createStore);
+  sagaMiddleware(...sagas), reduxRouterMiddleware, logger)(createStore);
 
 export default function configureStore(initialState) {
   const store = finalCreateStore(rootReducer, initialState);
