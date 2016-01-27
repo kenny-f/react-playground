@@ -7,11 +7,13 @@ import { browserHistory } from 'react-router';
 import rootReducer from '../reducers';
 import loginSaga from '../sagas/login-saga';
 
-const logger = createLogger({
-  stateTransformer: state => {
-    return JSON.stringify(state);
-  },
-});
+//const logger = createLogger({
+//  stateTransformer: state => {
+//    return JSON.stringify(state);
+//  },
+//});
+
+const logger = createLogger();
 
 const sagas = [
   loginSaga,

@@ -1,14 +1,14 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import cors from 'cors';
 
 const app = express();
 app.use(cors());
-// app.use(bodyParser.urlencoded({ extended: true }));
-// app.use(bodyParser.json());
 
-app.get('/login', (res, req) => {
-  setTimeout(() => req.json({ token: 'some token from the server' }), 4000);
+app.get('/login', (req, res) => {
+  setTimeout(() => res.json({ token: 'some token from the server' }), 4000);
+  // setTimeout(() => {
+  //  res.status(401).json({ error: 'ERROR!!! ERR!!!' });
+  // }, 4000);
 });
 
 const port = 3001;

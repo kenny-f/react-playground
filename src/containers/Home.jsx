@@ -18,13 +18,17 @@ class Home extends Component {
 
   render() {
     return (
-      <RaisedButton label="Login" onClick={this.handleLogin}/>
+      <div>
+        {this.props.user.message}
+        <RaisedButton label="Login" onClick={this.handleLogin}/>
+      </div>
     );
   }
 }
 
 Home.propTypes = {
   requestLogin: PropTypes.func.isRequired,
+  user: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = state => {
