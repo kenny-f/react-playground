@@ -4,9 +4,10 @@ import { routeActions } from 'react-router-redux';
 import { receiveLogin, loginError } from '../actions/actions';
 import { login } from '../api';
 
-function* loginSaga() {
+function* loginSaga(getState) {
   yield take('LOGIN_REQUEST');
-  const res = yield call(login);
+  console.log('%%%%%%%% ', JSON.stringify(getState().user.creds));
+  const res = yield call(login, getState().user.creds);
   console.log('$$$$$$$$$$$$$$$$$$$$$$', res);
   if (res.error) {
     yield put(loginError(res.error));

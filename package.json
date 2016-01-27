@@ -72,6 +72,7 @@
     "history": "1.17.0",
     "isomorphic-fetch": "2.2.1",
     "jscheck": "0.2.0",
+    "koa": "1.1.2",
     "material-ui": "0.14.2",
     "radium": "^0.15.3",
     "react": "0.14.6",
