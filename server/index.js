@@ -10,10 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 app.post('/login', (req, res) => {
   const creds = req.body;
   if (creds.email === 'k@fung.com' && creds.password === 'kenny') {
-    setTimeout(() => res.json({token: 'some token from the server'}), 4000);
+    setTimeout(() => res.json({ token: 'some token from the server' }), 4000);
   } else {
     setTimeout(() => {
-      res.status(401).json({error: 'ERROR!!! ERR!!!'});
+      res.status(401).json({ error: 'Email and/or password incorrect' });
     }, 4000);
   }
 });

@@ -66,5 +66,10 @@ module.exports = {
   ],
   externals: {
     'jquery': 'jQuery'
+  },
+  node: {
+    net: 'empty',
+    tls: 'empty',
+    dns: 'empty',
   }
 };
