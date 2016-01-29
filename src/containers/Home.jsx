@@ -48,7 +48,6 @@ class Home extends Component {
   render() {
     return (
       <div>
-        {this.props.user.message}
         <TextField
           ref="email"
           hintText="Email"
@@ -66,11 +65,27 @@ class Home extends Component {
           errorText={this.getErrorMessages('password')}
         />
         <br />
-        <RaisedButton label="Login" onClick={this.handleLogin}/>
+        <RaisedButton
+          label="Login"
+          secondary
+          onClick={this.handleLogin}
+          disabled={!this.props.isValid()}
+        />
+        <br />
+        <br />
+        <br />
+        <br />
+        {this.props.user.message}
+        <br />
+        <br />
+        <br />
+        <p>isValid - email: { this.props.isValid('email').toString() }</p>
+        <br />
+        <p>isValid: { this.props.isValid().toString() }</p>
         <br />
         <p>errors: { JSON.stringify(this.props.errors) }</p>
         <br />
-        <p>get validation messages: { JSON.stringify(this.props.getValidationMessages) }</p>
+        <p>get validation messages: { JSON.stringify(this.props.getValidationMessages()) }</p>
       </div>
     );
   }
@@ -81,6 +96,7 @@ Home.propTypes = {
   user: PropTypes.object.isRequired,
   handleValidation: PropTypes.func.isRequired,
   getValidationMessages: PropTypes.func.isRequired,
+  isValid: PropTypes.func.isRequired,
   errors: PropTypes.object,
 };
 
