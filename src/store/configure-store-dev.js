@@ -7,7 +7,9 @@ import { browserHistory } from 'react-router';
 import rootReducer from '../reducers';
 import loginSaga from '../sagas/login-saga';
 
-const logger = createLogger();
+const logger = createLogger({
+  collapsed: true,
+});
 
 const sagas = [
   loginSaga,

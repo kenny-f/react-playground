@@ -14,7 +14,7 @@
     "lint:watch": "watch 'npm run lint' ./",
     "test": "mocha --compilers js:babel-core/register './src/**/*.spec*'",
     "test:watch": "npm test -- --watch",
-    "start": "npm run start-client& npm run start-server&",
+    "start": "npm run start-client& npm run start-server",
     "start-client": "babel-node .",
     "start-server": "nodemon --exec babel-node ./server --watch server"
   },
@@ -72,7 +72,6 @@
     "history": "1.17.0",
     "isomorphic-fetch": "2.2.1",
     "joi": "7.2.2",
-    "joi-validation-strategy": "0.3.3",
     "jscheck": "0.2.0",
     "koa": "1.1.2",
     "material-ui": "0.14.2",
@@ -84,8 +83,8 @@
     "react-router": "2.0.0-rc5",
     "react-router-redux": "2.1.0",
     "react-tap-event-plugin": "0.2.1",
-    "react-validation-mixin": "5.3.4",
     "redux": "3.0.5",
+    "redux-form": "4.1.6",
     "redux-saga": "0.4.1",
     "seamless-immutable": "5.0.1"
   },
