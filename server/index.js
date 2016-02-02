@@ -1,6 +1,13 @@
 import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
+import Joi from 'joi';
+
+const loginSchema = Joi.object().keys({
+  email: Joi.string().email().required(),
+  password: Joi.string().required(),
+});
+
 
 const app = express();
 app.use(cors());
@@ -9,6 +16,11 @@ app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x
 
 app.post('/login', (req, res) => {
   const creds = req.body;
+
+  Joi.validate(creds, loginSchema, {abortEarly:false}, (err, value) => {
+    console.log(err);
+  });
+
   if (creds.email === 'k@fung.com' && creds.password === 'kenny') {
     setTimeout(() => res.json({ token: 'some token from the server' }), 4000);
   } else {
