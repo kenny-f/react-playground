@@ -5,6 +5,8 @@ import Home from './containers/Home';
 import Dashboard from './containers/Dashboard';
 
 console.log('');
+console.log('');
+console.log('');
 
 export default (
   <Route component={App} path="/">
