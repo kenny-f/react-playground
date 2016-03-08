@@ -4,6 +4,8 @@ import App from './containers/app';
 import Home from './containers/Home';
 import Dashboard from './containers/Dashboard';
 
+console.log('');
+
 export default (
   <Route component={App} path="/">
     <IndexRoute component={Home} />
